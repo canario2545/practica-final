@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form id="loginForm">
+    <h1>Login</h1>
+    <label>Usuario</label>
+    <input type="text" placeholder="🤵 Escriba su Usuario" id="usuario" required>
+    <label>Contraseña</label>
+    <input type="password" placeholder="🔑 Escriba su Contraseña" id="clave" required>
+    <input type="submit" value="Entrar" onclick="login()">
+  </form>
+
+  <script>
+
+    function login() {
+      event.preventDefault();
+
+      let user = document.getElementById("usuario").value;
+      let pass = document.getElementById("clave").value;
+
+      if (user === "user" && pass === "1234") {
+        window.location = "bienvenida.html";
+      } else {
+        alert("Por favor revisar el usuario o la contraseña 🤍");
+      }
+    }
+
+  </script>
+</body>
+</html>
